@@ -63,7 +63,7 @@ def register_page():
     flash(f'Account created successfully! Youra re now logged is as {user_to_create.username}', category='success')
     return redirect(url_for('market_page'))
     
-  if form.errors != {}: #If there is no errors from validation  
+  if form.errors != {}: #If there is a errors in validation  
     for err_msg in form.errors.values():
       flash(f'There was an error with creating a user: {err_msg} ', category='warning')
   

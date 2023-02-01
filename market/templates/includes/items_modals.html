@@ -44,7 +44,7 @@
         <form method="POST">
           {{ purchase_form.hidden_tag() }}
 
-          <input id="purchased_item" name="purchased_item" type="hidden" value="{{item.name}}">
+          <input name="purchased_item" type="hidden" value="{{item.name}}">
           {{ purchase_form.submit(class="btn btn-primary") }}
         </form>
       </div>

@@ -1,0 +1,38 @@
+>> pip install virtualenv
+>> virtualenv [name for the virtual environment]
+>> .\[name of the virtaul environment created]\Scripts\activate
+
+If you are using bash terminal
+>> source [name of the virtaul environment created]/Scripts/activate
+
+
+place our project’s dependencies in a requirements.txt file:
+>> pip freeze > requirements.txt
+
+By providing the information to recreate the same virtual
+environment you used for your project, you will make everything
+run more smoothly for others. This will save you from
+headaches – after they've created their virtual environment, your
+colleagues would only need to enter the line below:
+
+>> pip install -r requirements.txt
+
+deactivate virtual environment
+>> deactivate
+
+
+
+
+Steps to follow in order to upload your flask app in heruko web hosting
+
+1. Intall Heruko CLI
+2. Install gunicorn -> pip install gunicorn
+3. Create 'Procfile' -> touch Procfile (if using bash terminal)
+4. Add this 'web: gunicorn app:[name of the python file]' inside the Procfile file
+5. pip freeze > requirements.txt
+6. Create git repository (add and commit)
+7. heroku login (excute this command in bash terminal)
+8. Do this in your keyboard to exit -> crtl+c+k
+9. heroku create
+
+
